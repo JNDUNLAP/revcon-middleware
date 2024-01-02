@@ -1,0 +1,422 @@
+[
+    {
+        "stopId": 1,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 2,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 3,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 4,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 5,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 6,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 7,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 8,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 9,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 10,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 11,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    },
+    {
+        "stopId": 12,
+        "freightDetails": {
+            "consigneeZip": "23320",
+            "shipmentMode": "LTL",
+            "shipperZip": "20105",
+            "miles": "0",
+            "shipperCountry": "USA",
+            "consigneeCountry": "USA",
+            "equipmentType": "Van",
+            "accessorials": [
+                "RSDE"
+            ],
+            "items": [
+                {
+                    "class": "150",
+                    "isHazardous": false,
+                    "pieces": 1,
+                    "weight": 123,
+                    "packaging": "pieces",
+                    "nmfc": 0,
+                    "productDescription": "Honda Bike/ATV",
+                    "density": "0",
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "billed": 0,
+                    "cost": 0,
+                    "unitsWeight": "0",
+                    "unitsDensity": "0",
+                    "unitsDimension": "0"
+                }
+            ]
+        }
+    }
+]
