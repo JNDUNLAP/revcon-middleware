@@ -95,11 +95,13 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	jsonData, err := json.Marshal(jsonPayload)
 	if err != nil {
 		log.Error("[StopID: %d] Error marshaling JSON: %v", stopID, err)
+		// errorReturn := fmt.Sprintf("[StopID: %d] Error marshaling JSON: %v", stopID, err)
 		return "", err
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, bytes.NewBuffer(jsonData))
 	if err != nil {
+		// errorReturn := fmt.Sprintf("Error posting Request", err)
 		return "", err
 	}
 
@@ -110,12 +112,14 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	resp, err := client.Do(req)
 	if err != nil {
 		log.Error("[StopID: %d] Error sending request: %v", stopID, err)
+		// errorReturn := fmt.Sprintf("[StopID: %d] Error sending request: %v", stopID, err)
 		return "", err
 	}
 	defer resp.Body.Close()
 
 	responseBody, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
+		// errorReturn := fmt.Sprintf("Error Reading Response: %s", err)
 		return "", err
 	}
 
@@ -125,7 +129,7 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 		log.Error("Status Code: %v, [UUID: %v] [StopID: %d] ", resp.StatusCode, requestID, stopID)
 	}
 
-	return string(responseBody), nil
+	return string(responseBody), err
 }
 
 func LoadJSONFile(filePath string) (map[string]interface{}, error) {
@@ -200,9 +204,8 @@ func ProcessSingleRequest(req PayloadRequest, headers map[string]string) (Respon
 
 	if err != nil {
 		return ResponseWithStopID{
-			StopID:   req.StopId,
-			Response: []APIResponseItem{},
-			Error:    err.Error(),
+			StopID: req.StopId,
+			Error:  fmt.Sprintf("Error Posting with Context: %s", err.Error()),
 		}, nil
 	}
 

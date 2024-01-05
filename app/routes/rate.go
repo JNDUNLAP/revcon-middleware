@@ -22,15 +22,16 @@ func SubmitRatingHandler(w http.ResponseWriter, r *http.Request) {
 	processor, err := handlers.NewRequestProcessor()
 
 	if err != nil {
-		handlers.RespondWithError(w, http.StatusBadRequest, "Error Intitating Workers")
+		requestError := fmt.Sprintf("Error Handling Requests: %s", err)
+		handlers.RespondWithError(w, http.StatusBadRequest, requestError)
 		return
 	}
 
 	responses, err := processor.ProcessRequestsInParallel(requests)
 
 	if err != nil {
-
-		handlers.RespondWithError(w, http.StatusInternalServerError, "Error processing requests")
+		conncurencyError := fmt.Sprintf("Error Handling Requests: %s", err)
+		handlers.RespondWithError(w, http.StatusInternalServerError, conncurencyError)
 		return
 	}
 
