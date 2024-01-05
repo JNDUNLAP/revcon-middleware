@@ -118,15 +118,18 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	defer resp.Body.Close()
 
 	responseBody, err := ioutil.ReadAll(resp.Body)
+
 	if err != nil {
+		log.Error("%d, REVCON RESPONSE: %s", resp.StatusCode, responseBody)
+
 		// errorReturn := fmt.Sprintf("Error Reading Response: %s", err)
 		return "", err
 	}
 
 	if resp.StatusCode == http.StatusOK {
-		log.Info("Status Code: %v, [UUID: %v] [StopID: %d] ", resp.StatusCode, requestID, stopID)
+		log.Info("Status Code: %v, [UUID: %v] [StopID: %d] | Response %s", resp.StatusCode, requestID, stopID, responseBody)
 	} else {
-		log.Error("Status Code: %v, [UUID: %v] [StopID: %d] ", resp.StatusCode, requestID, stopID)
+		log.Error("Status Code: %v, [UUID: %v] [StopID: %d] | Response %s", resp.StatusCode, requestID, stopID, responseBody)
 	}
 
 	return string(responseBody), err
