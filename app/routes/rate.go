@@ -3,6 +3,7 @@ package routes
 import (
 	"dunlap/app/handlers"
 	"dunlap/app/log"
+	"fmt"
 	"net/http"
 	"time"
 )
@@ -13,7 +14,8 @@ func SubmitRatingHandler(w http.ResponseWriter, r *http.Request) {
 
 	requests, err := handlers.ParseRequests(r)
 	if err != nil {
-		handlers.RespondWithError(w, http.StatusBadRequest, "Error parsing requests")
+		parsingError := fmt.Sprintf("Error Parsing Requests: %s", err)
+		handlers.RespondWithError(w, http.StatusBadRequest, parsingError)
 		return
 	}
 
@@ -27,6 +29,7 @@ func SubmitRatingHandler(w http.ResponseWriter, r *http.Request) {
 	responses, err := processor.ProcessRequestsInParallel(requests)
 
 	if err != nil {
+
 		handlers.RespondWithError(w, http.StatusInternalServerError, "Error processing requests")
 		return
 	}
