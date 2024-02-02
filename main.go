@@ -42,8 +42,8 @@ func main() {
 	server := &http.Server{
 		Addr:         ":" + serverPort,
 		Handler:      r,
-		ReadTimeout:  500 * time.Second,
-		WriteTimeout: 500 * time.Second,
+		ReadTimeout:  1000 * time.Second,
+		WriteTimeout: 1000 * time.Second,
 	}
 
 	go func() {
