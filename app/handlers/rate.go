@@ -187,7 +187,7 @@ func RespondWithError(w http.ResponseWriter, statusCode int, message string) {
 }
 
 func ProcessSingleRequest(req PayloadRequest, headers map[string]string) (ResponseWithStopID, error) {
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 69*time.Second)
 
 	defer cancel()
 
