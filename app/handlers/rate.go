@@ -126,14 +126,18 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 		return "", err
 	}
 
-	if resp.StatusCode == http.StatusOK {
-		log.Info("Status Code: %v, [UUID: %v] [StopID: %d] | Response %s", resp.StatusCode, requestID, stopID, responseBody)
-	} else {
-		log.Error("Status Code: %v",resp.StatusCode)
-
+	if resp.StatusCode != http.StatusOK {
+	    // You can log the response body for debugging or return it as part of the error message
+	    log.Error("[UUID: %v] [StopID: %d] Non-200 HTTP status code: %v, Response Body: %s", requestID, stopID, resp.StatusCode, responseBody)
+	    
+	    // Here you could map status codes to custom error messages or take actions as needed
+	    err = fmt.Errorf("non-200 HTTP status code received: %d, body: %s", resp.StatusCode, responseBody)
+	    return "", err
 	}
-
-	return string(responseBody), err
+	
+	log.Info("Status Code: %v, [UUID: %v] [StopID: %d] | Response %s", resp.StatusCode, requestID, stopID, responseBody)
+	
+	return string(responseBody), nil
 }
 
 func LoadJSONFile(filePath string) (map[string]interface{}, error) {
