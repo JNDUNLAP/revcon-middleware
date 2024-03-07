@@ -110,7 +110,7 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	}
 
 	    // Log the request body for debugging, ensure sensitive information is not logged
-	log.Info("Request body: %s", string(jsonData))
+	
 
 	resp, err := client.Do(req)
 	if err != nil {
@@ -135,10 +135,8 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	}
 
 	if resp.StatusCode != http.StatusOK {
-	    // You can log the response body for debugging or return it as part of the error message
-	    log.Error("[UUID: %v] [StopID: %d] Non-200 HTTP status code: %v, Response Body: %s", requestID, stopID, resp.StatusCode, responseBody)
+	    log.Error("[UUID: %v] [StopID: %d] Non-200 HTTP status code: %v, Payload: %s, Response Body: %s | End of Log - Debug |", requestID, stopID, resp.StatusCode, string(jsonData) responseBody)
 	    
-	    // Here you could map status codes to custom error messages or take actions as needed
 	    err = fmt.Errorf("non-200 HTTP status code received: %d, body: %s", resp.StatusCode, responseBody)
 	    return "", err
 	}
@@ -215,7 +213,7 @@ func ProcessSingleRequest(req PayloadRequest, headers map[string]string) (Respon
 		"accessorials":     req.FreightDetails.Accessorials,
 		"items":            req.FreightDetails.Items,
 	}
-	fmt.Println(payloadMap)
+
 
 	response, err := PostRequestWithContext(ctx, SharedClient, os.Getenv("REVCON_API_URL"), headers, payloadMap, req.StopId)
 
