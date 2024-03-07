@@ -244,6 +244,7 @@ func (p *RequestProcessor) ProcessRequestsInParallel(requests []PayloadRequest) 
 			for req := range requestQueue {
 				response, err := ProcessSingleRequest(req, p.Headers)
 				if err != nil {
+					log.Error("%v", err.Error())
 					responseChan <- ResponseWithStopID{
 						StopID:   req.StopId,
 						Response: nil,
