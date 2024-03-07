@@ -109,6 +109,9 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 		req.Header.Set(key, value)
 	}
 
+	    // Log the request body for debugging, ensure sensitive information is not logged
+	log.Info("Request body: %s", string(jsonData))
+
 	resp, err := client.Do(req)
 	if err != nil {
 		log.Error("[StopID: %d] Error sending request: %v", stopID, err)
