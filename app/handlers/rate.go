@@ -135,7 +135,7 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	}
 
 	if resp.StatusCode != http.StatusOK {
-	    log.Error("[UUID: %v] [StopID: %d] Non-200 HTTP status code: %v, Payload: %s, Response Body: %s | End of Log - Debug |", requestID, stopID, resp.StatusCode, string(jsonData) responseBody)
+	    log.Error("[UUID: %v] [StopID: %d] Non-200 HTTP status code: %v, Payload: %s, Response Body: %s | End of Log - Debug |", requestID, stopID, resp.StatusCode, string(jsonData), responseBody)
 	    
 	    err = fmt.Errorf("non-200 HTTP status code received: %d, body: %s", resp.StatusCode, responseBody)
 	    return "", err
