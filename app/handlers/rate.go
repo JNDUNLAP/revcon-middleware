@@ -129,7 +129,8 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	if resp.StatusCode == http.StatusOK {
 		log.Info("Status Code: %v, [UUID: %v] [StopID: %d] | Response %s", resp.StatusCode, requestID, stopID, responseBody)
 	} else {
-		log.Error("Detail %s", resp.StatusCode)
+		log.Error(string(responseBody))
+
 	}
 
 	return string(responseBody), err
