@@ -212,6 +212,7 @@ func ProcessSingleRequest(req PayloadRequest, headers map[string]string) (Respon
 		"accessorials":     req.FreightDetails.Accessorials,
 		"items":            req.FreightDetails.Items,
 	}
+	log.Info(payloadMap)
 
 	response, err := PostRequestWithContext(ctx, SharedClient, os.Getenv("REVCON_API_URL"), headers, payloadMap, req.StopId)
 
