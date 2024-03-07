@@ -141,7 +141,7 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	    return "", err
 	}
 	
-	log.Info("Status Code: %v, [UUID: %v] [StopID: %d] | Response %s", resp.StatusCode, requestID, stopID, responseBody)
+	log.Info("Status Code: %v, [UUID: %v] [StopID: %d] ", resp.StatusCode, requestID, stopID)
 	
 	return string(responseBody), nil
 }
