@@ -118,6 +118,11 @@ func PostRequestWithContext(ctx context.Context, client *http.Client, url string
 	defer resp.Body.Close()
 
 	responseBody, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+	    log.Error("[StopID: %d] Error reading response body: %v", stopID, err)
+	    return "", err
+	}
+
 
 	if err != nil {
 		log.Error("%d, REVCON RESPONSE: %s", resp.StatusCode, responseBody)
