@@ -163,18 +163,30 @@ func LoadJSONFile(filePath string) (map[string]interface{}, error) {
 }
 
 func ParseRequests(r *http.Request) ([]PayloadRequest, error) {
-	body, err := ioutil.ReadAll(r.Body)
-	if err != nil {
-		return nil, err
-	}
-	defer r.Body.Close()
+    body, err := ioutil.ReadAll(r.Body)
+    if err != nil {
+        return nil, err
+    }
+    defer r.Body.Close()
 
-	var requests []PayloadRequest
-	if err := json.Unmarshal(body, &requests); err != nil {
-		return nil, err
-	}
-	log.Info("Origin Requests: %s", string(body))
-	return requests, nil
+    var requests []PayloadRequest
+    if err := json.Unmarshal(body, &requests); err != nil {
+        return nil, err
+    }
+
+    // Log the body of the request
+    log.Infof("Origin Requests Body: %s", string(body))
+
+    // Log headers of the request
+    log.Info("Request Headers:")
+    for name, values := range r.Header {
+        // Loop over all values for the name.
+        for _, value := range values {
+            log.Infof("%s: %s", name, value)
+        }
+    }
+
+    return requests, nil
 }
 
 func NewRequestProcessor() (*RequestProcessor, error) {
