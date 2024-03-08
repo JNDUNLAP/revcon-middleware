@@ -173,6 +173,7 @@ func ParseRequests(r *http.Request) ([]PayloadRequest, error) {
 	if err := json.Unmarshal(body, &requests); err != nil {
 		return nil, err
 	}
+	log.Info("Origin Requests: %s", string(body))
 	return requests, nil
 }
 
