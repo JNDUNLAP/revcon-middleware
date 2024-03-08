@@ -175,7 +175,7 @@ func ParseRequests(r *http.Request) ([]PayloadRequest, error) {
     }
 
     // Log the body of the request
-    log.Infof("Origin Requests Body: %s", string(body))
+    log.Info("Origin Requests Body: %s", string(body))
 
     // Log headers of the request
     log.Info("Request Headers:")
