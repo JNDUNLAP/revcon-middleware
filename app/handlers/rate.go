@@ -182,7 +182,7 @@ func ParseRequests(r *http.Request) ([]PayloadRequest, error) {
     for name, values := range r.Header {
         // Loop over all values for the name.
         for _, value := range values {
-            log.Infof("%s: %s", name, value)
+            log.Info("%s: %s", name, value)
         }
     }
 
